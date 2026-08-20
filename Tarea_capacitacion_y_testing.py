@@ -57,16 +57,7 @@ class AveMal:
             return 0 if self.esta_enferma else 30
         raise ValueError("Tipo de ave desconocido")
 
-    def plumaje(self):
-        # ...y aquí ESTÁ REPETIDO el mismo condicional. Si mañana agrego
-        # el ave "australiana" tengo que acordarme de editar los dos.
-        if self.tipo == "europeo":
-            return "promedio"
-        elif self.tipo == "africano":
-            return "gastado" if self.num_cocos > 2 else "promedio"
-        elif self.tipo == "noruego":
-            return "mojado" if self.esta_enferma else "brillante"
-        raise ValueError("Tipo de ave desconocido")
+    
 
 
 # --------------------------- DESPUÉS ---------------------------------
