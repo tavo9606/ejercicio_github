@@ -28,7 +28,7 @@ from abc import ABC, abstractmethod
 
 # =====================================================================
 # 1) REPLACE CONDITIONAL WITH POLYMORPHISM
-#    (Reemplazar condicional con polimorfismo)
+#    (Reemplazar condiciona se hizo el cambio) se hizo otro cambio
 # =====================================================================
 #
 # PROBLEMA (olor): un condicional (if/elif) que se ramifica según el TIPO
