@@ -28,7 +28,7 @@ from abc import ABC, abstractmethod
 
 # =====================================================================
 # 1) REPLACE CONDITIONAL WITH POLYMORPHISM
-#    (Reemplazar condiciona se hizo el cambio) se hizo otro cambio
+#    (Reemplazar condiciona se hizo el cambio) se hizo otro cambio en 
 # =====================================================================
 #
 # PROBLEMA (olor): un condicional (if/elif) que se ramifica según el TIPO
@@ -57,7 +57,16 @@ class AveMal:
             return 0 if self.esta_enferma else 30
         raise ValueError("Tipo de ave desconocido")
 
-    
+    def plumaje(self):
+        # ...y aquí ESTÁ REPETIDO el mismo condicional. Si mañana agrego
+        # el ave "australiana" tengo que acordarme de editar los dos.
+        if self.tipo == "europeo":
+            return "promedio"
+        elif self.tipo == "africano":
+            return "gastado" if self.num_cocos > 2 else "promedio"
+        elif self.tipo == "noruego":
+            return "mojado" if self.esta_enferma else "brillante"
+        raise ValueError("Tipo de ave desconocido")
 
 
 # --------------------------- DESPUÉS ---------------------------------
